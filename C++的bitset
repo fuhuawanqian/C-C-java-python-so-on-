@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+//#include<bitset>
+
+using namespace std;
+typedef unsigned long long ull;
+int main(){
+    //这里一般bitset<const>tmp(),括号中一般是ul或string,
+    //这里用n会出正确结果是因为只有8位
+    const int n=8;//必须是常量
+    string str1="10000";
+    bitset<n> tmp1(str1);
+    cout<<tmp1<<endl;//00010000
+    ull a=16;
+    bitset<n> tmp2(a);
+    cout<<tmp2<<endl;//00010000
+    int b=16;
+    bitset<n> tmp(b);
+    string str2=tmp.to_string();
+    cout<<str2<<endl;//00010000
+    return 0;
+}
